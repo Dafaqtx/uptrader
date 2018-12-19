@@ -1,0 +1,53 @@
+// basic
+*, *::before, *::after
+	box-sizing: border-box
+	
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+
+img
+	display: block
+	max-width: 100%
+				
+.flex
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+
+	&--align-right
+		justify-content: flex-end
+
+	&--align-center
+		justify-content: center
+
+	&--align-justify
+		justify-content: space-between
+
+	&--align-spaced
+		justify-content: space-around
+
+	&--align-top
+		align-items: flex-start
+
+	&--align-bottom
+		align-items: flex-end
+
+	&--align-middle
+		align-items: center
+
+	&--align-stretch
+		align-items: stretch
+
+.container
+	max-width: 1230px
+	margin: auto
+	position: relative
+
+.column
+	padding: 0 15px
