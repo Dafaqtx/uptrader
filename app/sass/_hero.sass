@@ -17,7 +17,9 @@
         display: flex 
         justify-content: center
 
-
+    &__resonse
+        display: none
+        
     &__item
     
     &-item
@@ -28,11 +30,8 @@
         flex-direction: column
         align-items: center
         justify-content: center
-       
         cursor: pointer
         transition: all .3s ease
-
-       
 
         &__wrapper
             width: 365px
@@ -62,3 +61,139 @@
             font-weight: 300
             color: #242424
 
+@media screen and (max-width: 1200px)
+    .hero
+        height: 100vh
+        justify-content: flex-start
+        transition: all .3s ease
+       
+
+        &--height
+            height: 100%
+            background: #f3f2da
+
+        &__title
+            font-size: 36px
+            line-height: normal
+            margin-top: 30px
+            margin-bottom: 25px
+
+        &__items
+            border-radius: 
+            flex-direction: column
+
+        &-item
+            background: #fff
+            height: 68px
+            border-radius: 0%
+            flex-direction: row
+            justify-content: flex-start
+            padding-left: 20px
+            position: relative
+            
+            &__text
+                color: #2b2b2b
+                font-size: 19px
+                font-weight: 400
+                margin: 0
+
+            &__wrapper
+                padding: 0 15px
+                height: auto
+                background: transparent
+                border-radius: 0%
+                width: 100% 
+                margin: 0
+                position: relative
+                margin-bottom: 13px
+
+                &:hover
+                    padding: 0 15px
+
+                    .hero-item
+                        border: none
+
+                &:last-child
+                    margin-bottom: 0
+
+                &--active
+                    background: url(../img/type/type-bg.png) 100% 100% / 150% no-repeat #f3f2da
+
+                    & .hero-item
+
+                        &::after
+                            transform: rotate(135deg) translateY(-50%)
+                            transform-origin: 0% 0%
+                            transition: all .3s ease
+            &::after
+                content: ''
+                width: 10px
+                height: 10px
+                border: 1px solid #000203
+                border-top: none
+                border-right: none
+                position: absolute
+                right: 15px
+                top: 50%
+                transform: rotate(-45deg) translateY(-50%)
+                transition: all .3s ease
+
+            &__img
+                max-width: 35px    
+                display: flex
+                align-items: center
+                margin-right: 20px
+
+        &__resonse
+            padding-top: 20px
+            padding-bottom: 200px
+
+            & p 
+                margin: 0
+                margin-bottom: 40px
+                color: #1c1c1c
+                font-size: 18px
+                font-weight: 300
+                line-height: 24px
+
+            & h3
+                color: #171717
+                font-size: 24px
+                font-weight: 300    
+
+            & ol
+                counter-reset: myCounter
+                margin-bottom: 50px
+                padding: 0
+
+            & li
+                list-style: none
+                position: relative     
+                color: #1d1d1d
+                font-size: 18px   
+                display: flex
+                align-content: center
+                line-height: normal
+                margin-bottom: 20px
+                
+                &::before
+                    margin-right: 21px
+                    content: counter(myCounter)   
+                    counter-increment: myCounter
+                    color: #00b596
+                    font-size: 32px
+                    font-weight: 300
+                    display: flex
+                    align-items: center
+                    line-height: 24px
+
+            & button
+                width: 156px
+                height: 45px
+                border-radius: 3px
+                border: none
+                background-color: #009e82       
+                font-size: 18px
+                font-weight: 500
+                color: #feffff
+                cursor: pointer
