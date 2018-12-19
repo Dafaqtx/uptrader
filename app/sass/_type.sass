@@ -1,0 +1,111 @@
+.type
+    // margin-bottom: 500px
+    height: 100vh
+    background: url('../img/type/type-bg.png') center / cover no-repeat
+
+    &__tabs
+
+    &-tabs
+
+        &__list
+            list-style: none
+            padding: 0
+            margin: 0
+            display: flex
+            flex-wrap: wrap  
+            align-items: center
+            justify-content: center
+            position: relative
+            z-index: 1
+
+            &::after
+                content: ''
+                width: 100%
+                height: 1px
+                background: #b5b5b5
+                position: absolute
+                bottom: 0px
+                z-index: -1
+
+        &__item
+            color: #2e2e2e
+            font-size: 28px
+            font-weight: 400
+            width: 345px
+            line-height: 26px
+            text-align: center
+            padding: 44px 0 42px 0   
+            margin-right: 70px
+            border-bottom: 3px solid transparent
+            cursor: pointer
+
+            &--active
+                color: #009e82
+                border-bottom: 3px solid #00978a
+
+            &:last-child
+                margin-right: 0  
+
+        &__content
+            padding-top: 88px
+            max-width: 680px
+            display: none
+
+            &--active
+                display: block    
+
+            &--wrapper
+                max-width: 1200px
+                margin: 0 auto
+                padding: 0 15px
+                position: relative   
+
+            & p 
+                margin: 0
+                margin-bottom: 40px
+                color: #1c1c1c
+                font-size: 18px
+                font-weight: 300
+                line-height: 24px
+
+            & h3
+                color: #171717
+                font-size: 24px
+                font-weight: 300    
+
+            & ol
+                counter-reset: myCounter
+                margin-bottom: 50px
+                padding: 0
+
+            & li
+                list-style: none
+                position: relative     
+                color: #1d1d1d
+                font-size: 18px   
+                display: flex
+                align-content: center
+                line-height: normal
+                margin-bottom: 20px
+                
+                &::before
+                    margin-right: 21px
+                    content: counter(myCounter)   
+                    counter-increment: myCounter
+                    color: #00b596
+                    font-size: 32px
+                    font-weight: 300
+                    display: flex
+                    align-items: center
+                    line-height: 24px
+
+            & button
+                width: 156px
+                height: 45px
+                border-radius: 3px
+                border: none
+                background-color: #009e82       
+                font-size: 18px
+                font-weight: 500
+                color: #feffff
+                cursor: pointer
